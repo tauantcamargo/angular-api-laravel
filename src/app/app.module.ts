@@ -7,6 +7,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductsComponent } from './products/products.component';
+import { AllanComponent } from './allan/allan.component';
 
 const appRoutes: Routes = [
   { path : '', pathMatch: 'full', component : ProductsComponent },
@@ -17,7 +18,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     ProductListComponent,
-    ProductsComponent
+    ProductsComponent,
+    AllanComponent
   ],
   imports: [
     BrowserModule,

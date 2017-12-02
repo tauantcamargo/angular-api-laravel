@@ -13,8 +13,8 @@ export class ProductsComponent implements OnInit {
   produtoForm: FormGroup;
 
   products:any = [];
-  //baseurl = 'https://apsmeetupapi.herokuapp.com/api/v1/products';
-  baseurl = 'http://localhost:8000/api/v1/products';
+  baseurl = 'https://apsmeetupapi.herokuapp.com/api/v1/products';
+  //baseurl = 'http://localhost:8000/api/v1/products';
 
   constructor(private http: HttpClient, private fb: FormBuilder) {
     this.produtoForm = fb.group({
@@ -35,7 +35,7 @@ export class ProductsComponent implements OnInit {
   listar () {
     this.http.get(this.baseurl)
       .subscribe(response => {
-        this.products = response.data;
+        this.products = response;
       });
   }
 
